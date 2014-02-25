@@ -17,9 +17,11 @@ keep in mind to check your serial port by terminal ls /dev/tty*
 
 ___
 how to use:
-1 open terminal 
-2 go where getData.sh is located e.g. cd /Users/robertofazio/Desktop/GetData.sh 
-3 It create a local file called lastSolarExplosion.txt and send the last values of the solar explosion to serial port
+- open terminal 
+- go where getData.sh is located e.g. cd /Users/robertofazio/Desktop/GetData.sh 
+- It create a local file called lastSolarExplosion.txt and send the last values of the solar explosion to serial port
+
+if you want to read through serial port try the Arduino sketch example.
 
 n.b.
 github space It's just a reminder for me. This is a work in progress for my 8 minutes installation.
