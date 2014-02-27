@@ -1,13 +1,36 @@
 getSolarExplosion
 =================
 
-get the radiological activity of the Sun in real time every minutes
+Get the radiological activity of the Sun in real time every minutes
+___
 
-On March 4, 2010, the NOAA ( National Oceanic and Atmospheric Administration ) under the technical guidance of NASA launches the geosta- tionary satellite GOES- 15, which currently continues to orbit along the Earth at a distance of 35.780 km .
-Its function is to monitor the radiological activity of the Sun and its impact on our planet constantly sending x-ray images of the Sun
+On March 4, 2010, the NOAA ( National Oceanic and Atmospheric Administration ) under the technical guidance of NASA launches the geostationary satellite GOES- 15, which currently continues to orbit along the Earth at a distance of 35.780 km .
 
-With this shell script you will be able to receive every minutes the Solar X-ray Flux ( you will get in Watts units per meter squared ) and then send the last value to serial for example to Arduino, Processing, openFrameworks ...
+Its mainly function is to monitor the weather and among other things it also monitors the activity of the Sun in particular the radiological activity of the Sun. 
 
+Following the research of my friend Alejandro Tamayo http://www.thepopshop.org/ and his partner Iván López I decided to use the same openData to get the solar datas and try to use it in order to develop an interactive light installation.
+
+The algorithm was developed as an artistic project, as an art-science collaboration between Alejandro and Iván López, and it was part of a larger project called "Internal Astronomies" which Alejandro developed during his MFA.
+
+For more info about his idea to use the solar explosion take a look into the Alejandro web page :
+http://www.thepopshop.org/2011/1/index_en.html
+http://medialab-bogota.org/wiki/doku.php?id=explosiones
+
+___
+how it works:
+
+With this shell script you will be able to receive every minutes the intensity of the Solar X-ray Flux (in Watts units per meter squared)  then send the last value to serial to Arduino. 
+
+# get the datas
+wget http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
+
+# send to serial port to Arduino and save to .txt file
+cat lastSolarExplosion.txt > /dev/tty.usbmodem1421
+cat lastSolarExplosion.txt > filedaleggere.txt
+
+Processing reads the last values by text streaming 
+
+#read every minutes 
 ___
 
 http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
