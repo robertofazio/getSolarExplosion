@@ -49,5 +49,9 @@ github space It's just a reminder for me. This is a work in progress for my 8 mi
 
 more info about satellite GOES- 15 on NASA website http://www.nasa.gov/mission_pages/GOES-P/science/index.html
 
+___
+
+additional credits : 
+Alejandro Tamajo , Giulio Todini , Luca Marchetti. 
 
 
