@@ -21,16 +21,16 @@ how it works:
 
 With this shell script you will be able to receive every minutes the intensity of the Solar X-ray Flux (in Watts units per meter squared)  then send the last value to serial to Arduino. 
 
-# get the datas
+// get the datas
 wget http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
 
-# send to serial port to Arduino and save to .txt file
+// send to serial port to Arduino and save to .txt file
 cat lastSolarExplosion.txt > /dev/tty.usbmodem1421
 cat lastSolarExplosion.txt > filedaleggere.txt
 
 Processing reads the last values by text streaming 
 
-#read every minutes 
+// read every minutes 
 ___
 
 http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
