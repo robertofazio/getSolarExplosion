@@ -1,5 +1,5 @@
 
-int serialLastExplosion;
+char serialLastExplosion;
 
 void setup() {
 
@@ -16,6 +16,6 @@ void loop(){
    { 
       serialLastExplosion = Serial.read();
       delay(1); // importante per non perdere sicronismo con unity3d
-      Serial.println(serialLastExplosion);
+      Serial.print(serialLastExplosion);
     }
 }

@@ -2,9 +2,10 @@
 # set the options for a terminal device interface
 stty -F /dev/tty.usbmodem1421 9600 -parity cs8 -cstopb
 
+
 while :
 do
-    sleep 60 & pid=$!
+    sleep 30 & pid=$!
     
 # scarica il file
 wget http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
@@ -16,6 +17,8 @@ tail -1 Gp_xr_1m.txt| awk '{ print $8 }'> lastSolarExplosion.txt
 
 # concatenate and print files
 cat lastSolarExplosion.txt > /dev/tty.usbmodem1421
+cat lastSolarExplosion.txt > filedaleggere.txt
+
 # remove directory entries
 rm Gp_xr_1m.txt
 
