@@ -17,41 +17,14 @@ http://medialab-bogota.org/wiki/doku.php?id=explosiones
 ___
 how it works:
 
-With this shell script you will be able to receive every minutes the intensity of the Solar X-ray Flux (in Watts units per meter squared)  then send the last value to serial to Arduino. 
-
-// get the datas
-  wget http://www.swpc.noaa.gov/ftpdir/lists/xray/Gp_xr_1m.txt
-
-// send to serial port to Arduino and save to .txt file
-  cat lastSolarExplosion.txt > /dev/tty.usbmodem1421
-  cat lastSolarExplosion.txt > filedaleggere.txt
-
-// Processing reads the last values by text streaming 
-  BufferedReader reader;
-  line = reader.readLine();
-
-___
-
-keep in mind to check your serial port by terminal ls /dev/tty*
-/dev/tty.usbmodem1421
-
-___
-how to use:
-- open terminal 
-- go where getData.sh is located e.g. ../GetData.sh 
-- It create a local file called lastSolarExplosion.txt and send the last values of the solar explosion to serial port
-- It create a local file called filedaleggere.txt for Processing 
-
-if you want to read through serial port try the Arduino sketch example.
-
-n.b.
-github space It's just a reminder for me. This is a work in progress for my 8 minutes installation.
-
+....
 more info about satellite GOES- 15 on NASA website http://www.nasa.gov/mission_pages/GOES-P/science/index.html
 
 ___
 
-additional credits : 
-Alejandro Tamajo , Giulio Todini , Luca Marchetti. 
-
+Knowledge and Credits: :
+Alejandro Tamajo, Iván López, Luca Marchetti
+Thanks to : Cristiano Lastrucci and Giulio Todini
+Supported by : Pindo, Tactile
+Production : Hiwhim
 
